@@ -1,0 +1,22 @@
+CERTUS TECH-CONNECT — GUÍA DE INICIO
+
+ARCHIVOS
+- index.html: estructura y contenido de la página.
+- style.css: colores, tamaños, distribución y adaptación a celulares.
+- script.js: funcionamiento del formulario para agregar publicaciones.
+
+CÓMO ABRIR EN VISUAL STUDIO CODE
+1. Descarga y descomprime el archivo ZIP.
+2. Abre Visual Studio Code.
+3. Selecciona Archivo > Abrir carpeta y elige la carpeta CERTUS_Tech_Connect.
+4. Abre index.html.
+5. Puedes abrir index.html en tu navegador. Si tienes la extensión Live Server, haz clic derecho en index.html y elige "Open with Live Server".
+6. Para probarlo, escribe un nombre, elige una categoría, escribe un mensaje y pulsa "Publicar mensaje".
+
+IMPORTANTE
+Esta es una demostración de front-end. Las publicaciones aparecen mientras la página está abierta, pero no se guardan permanentemente ni se comparten con otros estudiantes. Para eso se necesitaría una base de datos y un servidor.
+
+EXPLICACIÓN RÁPIDA
+HTML = estructura.
+CSS = apariencia.
+JavaScript = interacción.

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CERTUS Tech-Connect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Encabezado y menú principal -->
+  <header class="encabezado">
+    <div class="marca">
+      <div class="logo">CT</div>
+      <div>
+        <h1>CERTUS Tech-Connect</h1>
+        <p>Conecta · Comparte · Aprende</p>
+      </div>
+    </div>
+    <nav aria-label="Menú principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#comunidad">Comunidad</a>
+      <a href="#eventos">Eventos</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Presentación de la página -->
+    <section id="inicio" class="bienvenida">
+      <div>
+        <span class="etiqueta">COMUNIDAD TECNOLÓGICA CERTUS</span>
+        <h2>Tu espacio para aprender y compartir tecnología.</h2>
+        <p>Haz preguntas, comparte lo que sabes y descubre actividades junto a otros estudiantes de TI.</p>
+        <a class="boton boton-claro" href="#comunidad">Ir a la comunidad</a>
+      </div>
+      <div class="ilustracion" aria-hidden="true">
+        <span class="icono-grande">&lt;/&gt;</span>
+        <span class="burbuja burbuja-uno">Ideas</span>
+        <span class="burbuja burbuja-dos">Código</span>
+      </div>
+    </section>
+
+    <!-- Resumen de las secciones -->
+    <section class="resumen">
+      <article class="tarjeta-resumen">
+        <span class="icono">💬</span>
+        <div><h3>Comunidad</h3><p>Comparte preguntas e ideas.</p></div>
+      </article>
+      <article class="tarjeta-resumen">
+        <span class="icono">📅</span>
+        <div><h3>Eventos</h3><p>Entérate de talleres y concursos.</p></div>
+      </article>
+      <article class="tarjeta-resumen">
+        <span class="icono">💡</span>
+        <div><h3>Aprendizaje</h3><p>Aprende con otros estudiantes.</p></div>
+      </article>
+    </section>
+
+    <div class="contenido">
+      <!-- Sección para publicar mensajes -->
+      <section id="comunidad" class="panel">
+        <div class="titulo-seccion">
+          <div>
+            <span class="etiqueta">PARTICIPA</span>
+            <h2>Comunidad estudiantil</h2>
+          </div>
+          <span class="contador" id="contador">2 publicaciones</span>
+        </div>
+
+        <form id="formulario-publicacion">
+          <label for="nombre">Tu nombre</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Ej. Andrea" required>
+
+          <label for="categoria">Tema de la publicación</label>
+          <select id="categoria" name="categoria">
+            <option>Programación</option>
+            <option>Bases de datos</option>
+            <option>Diseño web</option>
+            <option>Eventos y oportunidades</option>
+          </select>
+
+          <label for="mensaje">¿Qué deseas compartir?</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribe una pregunta o comparte una idea..." required></textarea>
+
+          <button class="boton" type="submit">Publicar mensaje</button>
+          <p class="nota">Demostración: las publicaciones se muestran en esta página, pero no se guardan en un servidor.</p>
+        </form>
+
+        <div id="lista-publicaciones" class="lista-publicaciones" aria-live="polite">
+          <article class="publicacion">
+            <div class="avatar">ML</div>
+            <div class="publicacion-cuerpo">
+              <div class="datos-publicacion"><strong>María López</strong><span>Programación</span></div>
+              <p>¿Qué recursos recomiendan para practicar HTML y CSS desde cero?</p>
+            </div>
+          </article>
+          <article class="publicacion">
+            <div class="avatar avatar-verde">JP</div>
+            <div class="publicacion-cuerpo">
+              <div class="datos-publicacion"><strong>José Pérez</strong><span>Bases de datos</span></div>
+              <p>Estoy repasando las tablas y relaciones. ¡Podemos compartir nuestros apuntes!</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Información de eventos de ejemplo -->
+      <aside id="eventos" class="panel panel-eventos">
+        <span class="etiqueta">MANTENTE AL DÍA</span>
+        <h2>Próximas actividades</h2>
+        <article class="evento">
+          <div class="fecha"><strong>12</strong><span>NOV</span></div>
+          <div><h3>Taller de desarrollo web</h3><p>Introducción a HTML y CSS.</p></div>
+        </article>
+        <article class="evento">
+          <div class="fecha"><strong>18</strong><span>NOV</span></div>
+          <div><h3>Reto de programación</h3><p>Practica lógica con otros estudiantes.</p></div>
+        </article>
+        <article class="evento">
+          <div class="fecha"><strong>25</strong><span>NOV</span></div>
+          <div><h3>Encuentro de proyectos</h3><p>Comparte tus ideas tecnológicas.</p></div>
+        </article>
+        <p class="nota">Fechas de ejemplo; reemplázalas por actividades reales de CERTUS.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 CERTUS Tech-Connect · Proyecto académico de comunidad estudiantil.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,447 @@
+/* 1. Ajustes generales de toda la página */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Desplazamiento suave al pulsar el menú */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #182438;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 2. Encabezado y navegación */
+.encabezado {
+  background: #14243a;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #65d6c2;
+  color: #14243a;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.marca h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.marca p {
+  margin: 2px 0 0;
+  color: #c4d1e1;
+  font-size: 13px;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #65d6c2;
+}
+
+/* 3. Bloque principal de bienvenida */
+main {
+  max-width: 1180px;
+  margin: auto;
+  padding: 28px 22px 50px;
+}
+
+.bienvenida {
+  background: linear-gradient(120deg, #1b3658, #245b79);
+  color: white;
+  border-radius: 24px;
+  padding: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  overflow: hidden;
+}
+
+.bienvenida > div:first-child {
+  max-width: 650px;
+}
+
+.bienvenida h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.15;
+  margin: 12px 0;
+}
+
+.bienvenida p {
+  color: #e0eaf5;
+  max-width: 580px;
+}
+
+.etiqueta {
+  color: #168b7b;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
+.bienvenida .etiqueta {
+  color: #85f0dc;
+}
+
+.boton {
+  display: inline-block;
+  border: 0;
+  border-radius: 10px;
+  background: #187e75;
+  color: white;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background: #12675f;
+}
+
+.boton-claro {
+  background: #65d6c2;
+  color: #14243a;
+  margin-top: 10px;
+}
+
+.boton-claro:hover {
+  background: #8ce8d8;
+}
+
+.ilustracion {
+  min-width: 180px;
+  min-height: 170px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.icono-grande {
+  font-size: 68px;
+  font-weight: bold;
+  color: #85f0dc;
+}
+
+.burbuja {
+  position: absolute;
+  background: white;
+  color: #18324d;
+  border-radius: 12px;
+  padding: 7px 12px;
+  box-shadow: 0 8px 25px #10243a55;
+  font-weight: bold;
+}
+
+.burbuja-uno {
+  top: 15px;
+  right: 0;
+}
+
+.burbuja-dos {
+  bottom: 12px;
+  left: 0;
+}
+
+/* 4. Tarjetas de resumen */
+.resumen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 22px 0;
+}
+
+.tarjeta-resumen,
+.panel {
+  background: white;
+  border: 1px solid #e4eaf1;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px #1b36580a;
+}
+
+.tarjeta-resumen {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 18px;
+}
+
+.icono {
+  font-size: 28px;
+}
+
+.tarjeta-resumen h3,
+.tarjeta-resumen p {
+  margin: 0;
+}
+
+.tarjeta-resumen p,
+.evento p {
+  color: #69778b;
+  font-size: 13px;
+}
+
+/* 5. Distribución de comunidad y eventos */
+.contenido {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.panel {
+  padding: 25px;
+}
+
+.titulo-seccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.panel h2 {
+  margin: 4px 0 18px;
+}
+
+.contador {
+  color: #637287;
+  font-size: 12px;
+}
+
+/* 6. Formulario para escribir publicaciones */
+form {
+  display: grid;
+  gap: 9px;
+  padding: 18px;
+  background: #f7f9fc;
+  border-radius: 14px;
+  border: 1px solid #e5ebf3;
+}
+
+label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #ccd6e2;
+  border-radius: 9px;
+  background: white;
+  color: #182438;
+  font: inherit;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #65d6c2;
+  border-color: transparent;
+}
+
+form .boton {
+  justify-self: start;
+  margin-top: 5px;
+}
+
+.nota {
+  font-size: 11px;
+  color: #78869a;
+  margin-bottom: 0;
+}
+
+/* 7. Tarjetas de publicaciones creadas */
+.lista-publicaciones {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.publicacion {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border-bottom: 1px solid #e9edf3;
+  padding: 12px 0;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #dce8ff;
+  color: #2458a6;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.avatar-verde {
+  background: #d9f5e8;
+  color: #187e55;
+}
+
+.publicacion-cuerpo {
+  min-width: 0;
+}
+
+.datos-publicacion {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.datos-publicacion span {
+  background: #eaf7f4;
+  color: #187e75;
+  border-radius: 20px;
+  padding: 2px 8px;
+  font-size: 11px;
+}
+
+.publicacion p {
+  margin: 7px 0 0;
+  overflow-wrap: anywhere;
+}
+
+/* 8. Lista de eventos */
+.evento {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e9edf3;
+}
+
+.fecha {
+  min-width: 54px;
+  padding: 7px;
+  text-align: center;
+  border-radius: 11px;
+  background: #e7f7f3;
+  color: #187e75;
+}
+
+.fecha strong,
+.fecha span {
+  display: block;
+}
+
+.fecha strong {
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+.fecha span {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.evento h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.evento p {
+  margin: 4px 0 0;
+}
+
+/* 9. Pie de página */
+footer {
+  background: #14243a;
+  color: #c4d1e1;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}
+
+/* 10. Adaptación para celulares */
+@media (max-width: 760px) {
+  .encabezado {
+    padding: 16px 5%;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  main {
+    padding: 20px 14px 35px;
+  }
+
+  .bienvenida {
+    padding: 28px 22px;
+  }
+
+  .ilustracion {
+    display: none;
+  }
+
+  .resumen,
+  .contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    padding: 19px;
+  }
+}
+
+@media (max-width: 420px) {
+  .marca h1 {
+    font-size: 16px;
+  }
+
+  .bienvenida h2 {
+    font-size: 29px;
+  }
+}
